@@ -66,7 +66,7 @@ with tab2:
             min_value=100,
             max_value=220,
             value=190,
-            help="Deine persoenliche maximale Herzfrequenz in Schlaegen pro Minute.",
+            help="Deine persönliche maximale Herzfrequenz in Schlägen pro Minute.",
         )
 
     st.divider()
@@ -83,8 +83,8 @@ with tab2:
 
     st.divider()
 
-    st.markdown("#### Leistung und Herzfrequenz ueber Zeit")
-    st.caption("Die Herzfrequenz-Linie ist nach HF-Zone eingefarbt. Zoomen und Hovern moeglich.")
+    st.markdown("#### Leistung und Herzfrequenz über Zeit")
+    st.caption("Die Herzfrequenz-Linie ist nach HF-Zone eingefärbt. Zoomen und Hovern möglich.")
     fig = create_interactive_plot(df, max_hr=max_hr)
     st.plotly_chart(fig, use_container_width=True)
 
