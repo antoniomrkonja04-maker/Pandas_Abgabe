@@ -11,7 +11,18 @@ def read_csv():
     return df
 
 def make_plot(df):# Erstellt ein Liniendiagramm mit Plotly Express, wobei die x-Achse die Zeit in ms und die y-Achse die Messwerte in mV darstellt. Der Titel des Diagramms ist "EKG-Daten".
-    fig = px.line(df, x="Zeit in ms", y="Messwerte in mV", title="EKG-Daten")
+
+    fig = px.line(df.head(2000), x="Zeit in ms", y="Messwerte in mV")
+
+    fig.add_annotation(
+    text="Rudi auf die 1",
+    x=0.5, y=0.5,
+    xref="paper", yref="paper",
+    showarrow=False,
+    font=dict(size=60, color="rgba(255,0,50,0.35)", family="Comic Sans MS"),
+    textangle=-20,
+)
+    
     return fig
 
 if __name__ == "__main__":# Liest die CSV-Datei ein, gibt die ersten Zeilen des DataFrames aus und erstellt dann ein Liniendiagramm der EKG-Daten.

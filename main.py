@@ -21,7 +21,7 @@ with tab1:
     df_ekg = read_csv()
     fig_ekg = make_plot(df_ekg)
 
-    st.plotly_chart(fig_ekg, width='stretch')
+    st.plotly_chart(fig_ekg, use_container_width=True)
 
 
 
