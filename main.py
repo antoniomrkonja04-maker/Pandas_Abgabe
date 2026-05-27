@@ -51,10 +51,10 @@ with tab2:
     st.metric("Mittelwert der Leistung", f"{mean_power:.1f} W")
     st.metric("Maximalwert der Leistung", f"{max_power:.1f} W")
 
-    # 5) Interaktiver Plot
+    # 5) Interaktiver Plot (mit Zonen-Hintergrund)
     st.subheader("Interaktiver Plot: Leistung & Herzfrequenz")
-    fig = create_interactive_plot(df)
-    st.plotly_chart(fig, width='stretch')
+    fig = create_interactive_plot(df, max_hr=max_hr)
+    st.plotly_chart(fig, use_container_width=True)
 
     # 6) Zeit pro Zone
     st.subheader("Zeit in den Herzfrequenz-Zonen")
@@ -65,5 +65,3 @@ with tab2:
     st.subheader("Durchschnittliche Leistung pro Zone")
     avg_power_per_zone = compute_avg_power_per_zone(df)
     st.write(avg_power_per_zone)
-
-
