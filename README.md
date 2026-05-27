@@ -2,7 +2,7 @@
 
 Eine Streamlit-App zur Auswertung von EKG-Daten und Leistungstests.
 
-!(./images/screenshot.png)
+![Screenshot der App](./images/screenshot.png)
 
 ## Was die App kann
 
