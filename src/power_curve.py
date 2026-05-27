@@ -29,16 +29,7 @@ def plot_power(df: pd.DataFrame) -> None:
         x = df.index
         x_label = 'Messpunkt'
 
-    # Plot der Leistung über die Zeit
-    plt.figure(figsize=(10, 4))
-    plt.plot(x, df['PowerOriginal'], label='Leistung', color='blue')
-    plt.xlabel(x_label)
-    plt.ylabel('Leistung (W)')
-    plt.title('Leistung über Zeit')
-    plt.grid(True)
-    plt.legend()
-    plt.tight_layout()
-    plt.show()
+
 
     # Erzeuge die Leistungskurve (absteigend sortierte Leistung)
     power_values = df['PowerOriginal'].dropna().tolist()
