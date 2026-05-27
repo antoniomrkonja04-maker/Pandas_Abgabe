@@ -2,7 +2,7 @@
 
 Eine Streamlit-App zur Auswertung von EKG-Daten und Leistungstests.
 
-![Screenshot der App](./screenshot.png)
+!(./images/screenshot.png)
 
 ## Was die App kann
 
@@ -24,6 +24,8 @@ Pandas_Abgabe/
 ├── data/
 │   ├── activity.csv        # Leistungsdaten
 │   └── ekg_data/           # EKG-Rohdaten
+├── images/
+│   └── screenshot.png      # Screenshot der App
 ├── requirements.txt      # Abhaengigkeiten
 └── pyproject.toml        # PDM-Projektkonfiguration
 ```
