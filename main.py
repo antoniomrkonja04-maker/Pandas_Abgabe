@@ -6,3 +6,4 @@ datei = "data/activity.csv"
 df = pd.read_csv(datei)
 
 print (df.head())
+
