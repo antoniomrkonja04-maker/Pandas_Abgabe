@@ -57,7 +57,13 @@ pip install pdm
 pdm install
 ```
 
-3. App starten:
+3. Falls `streamlit not found in PATH` erscheint, Pakete explizit hinzufuegen:
+
+```bash
+pdm add streamlit plotly pandas numpy matplotlib
+```
+
+4. App starten:
 
 ```bash
 pdm run streamlit run main.py
