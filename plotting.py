@@ -43,7 +43,7 @@ def create_interactive_plot(df):
         # Update layout
         fig.update_layout(
             title="Leistung und Herzfrequenz über Zeit",
-            xaxis_title="Messpunkt",
+            xaxis_title="Zeit (Messpunkt)",
             hovermode='x unified'
         )
         
