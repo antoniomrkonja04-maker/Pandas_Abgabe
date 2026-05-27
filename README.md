@@ -27,11 +27,16 @@ Pandas_Abgabe/
 ├── data_processing.py    # Daten laden, Zonen und Kennzahlen berechnen
 ├── plotting.py           # Interaktiver Plot mit Plotly
 ├── read_pandas.py        # EKG-Daten laden und plotten
+├── src/
+│   ├── load_data.py        # Hilfsfunktionen Datenladen (alte Abgabe)
+│   ├── power_curve.py      # Leistungskurve (alte Abgabe)
+│   └── sort.py             # Sortieralgorithmen (alte Abgabe)
 ├── data/
 │   ├── activity.csv        # Leistungsdaten
 │   └── ekg_data/           # EKG-Rohdaten
 ├── images/
 │   └── Screenshot.png      # Screenshot der App
+├── .gitignore
 ├── requirements.txt      # Abhaengigkeiten
 └── pyproject.toml        # PDM-Projektkonfiguration
 ```
