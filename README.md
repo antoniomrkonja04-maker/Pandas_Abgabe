@@ -1,57 +1,62 @@
-# Leistungskurve
+# Sport Analytics App
 
-![Leistungskurve Grafik](./images/Figure_1.png)
+Eine Streamlit-App zur Auswertung von EKG-Daten und Leistungstests.
 
-Dieses Projekt analysiert und visualisiert Leistungskurven aus Aktivitätsdaten. Die Rohdaten werden sortiert und als Grafik dargestellt.
+![Screenshot der App](./screenshot.png)
 
-## Funktionen
+## Was die App kann
 
-- **Daten laden**: Liest Aktivitätsdaten aus CSV-Dateien
-- **Sortierung**: Implementiert Bubble Sort zum Sortieren von Leistungswerten
-- **Visualisierung**: Erstellt eine Power-Curve-Grafik mit Matplotlib
-- **Datenanalyse**: Behandelt große Datenmengen effizient
+- EKG-Rohdaten als interaktiven Plot anzeigen
+- Leistungsdaten aus `activity.csv` laden und auswerten
+- Mittlere und maximale Leistung berechnen
+- Herzfrequenz und Leistung gemeinsam plotten
+- Aktivitaet in 5 Herzfrequenz-Zonen einteilen (basierend auf eingegebener HFmax)
+- Zeit und durchschnittliche Leistung pro Zone anzeigen
 
 ## Projektstruktur
 
 ```
-Leistungskurve_Richtig/
-├── src/
-│   ├── load_data.py          # Daten aus CSV laden
-│   ├── sort.py               # Bubble Sort Implementierung
-│   └── power_curve.py        # Grafik-Erzeugung
+Pandas_Abgabe/
+├── main.py               # Streamlit-App (Einstiegspunkt)
+├── data_processing.py    # Daten laden, Zonen und Kennzahlen berechnen
+├── plotting.py           # Interaktiver Plot mit Plotly
+├── read_pandas.py        # EKG-Daten laden und plotten
 ├── data/
-│   └── activity.csv          # Aktivitätsdaten (Eingabe)
-├── images/
-│   └── Figure_1.png          # Beispiel-Ausgabegrafik
-├── requirements.txt          # Python-Abhängigkeiten
-├── README.md                 # Dokumentation (diese Datei)
-└── .gitignore               # Git-Ignorierungsdatei
+│   ├── activity.csv        # Leistungsdaten
+│   └── ekg_data/           # EKG-Rohdaten
+├── requirements.txt      # Abhaengigkeiten
+└── pyproject.toml        # PDM-Projektkonfiguration
 ```
 
-## Installation
+## App starten
 
-### Abhängigkeiten
+### Mit PDM
+
+1. PDM installieren (falls noch nicht vorhanden):
+
+```bash
+pip install pdm
+```
+
+2. Abhaengigkeiten installieren:
+
+```bash
+pdm install
+```
+
+3. App starten:
+
+```bash
+pdm run streamlit run main.py
+```
+
+### Ohne PDM (alternativ)
 
 ```bash
 pip install -r requirements.txt
+streamlit run main.py
 ```
-
-### Verwendung
-
-```bash
-python src/power_curve.py
-```
-
-Das Skript lädt die Daten aus `data/activity.csv`, sortiert die Leistungswerte und erstellt eine Grafik.
-
-## Abhängigkeiten
-
-- numpy
-- matplotlib
 
 ## Autoren
 
-Antonio Mrkonja 
-Lenn Oswald
-Noah Reinermann
-
+Antonio Mrkonja, Lenn Oswald, Noah Reinermann
